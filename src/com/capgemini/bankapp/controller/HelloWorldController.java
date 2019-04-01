@@ -3,6 +3,7 @@ package com.capgemini.bankapp.controller;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -27,7 +28,7 @@ public class HelloWorldController extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		out.println("Hello World!!!!");
 		
-		out.close();
+		//out.close();
 	}
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -37,13 +38,16 @@ public class HelloWorldController extends HttpServlet {
 		String password = req.getParameter("password");
 		
 		resp.setContentType("text/html");
-		PrintWriter out = resp.getWriter();
+		RequestDispatcher dispatcher = null;
+		//PrintWriter out = resp.getWriter();
 		
 		if(username.equals("root") && password.equals("root@123")) {
-			out.println("<h2>Login Successfull. WELCOME!!!!!"  +username + "</h2>");
-		}else
-			out.println("<h2>Inavalid username or Password</h2>");
-		
+		     dispatcher = req.getRequestDispatcher("success.html");
+		}else {
+			dispatcher = req.getRequestDispatcher("error.html");
+		}
+		dispatcher.forward(req, resp);
+		//out.close();
 		
 	}
 	

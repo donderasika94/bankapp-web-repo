@@ -1,0 +1,26 @@
+
+.bgimage{
+    background-image: url("images/151101_blue-green-wallpaper.jpg");
+}
+
+.navbar-brand{
+    font-family: cursive;
+    font-size: 25px;
+}
+.mymargin
+{
+    margin-top:10px;
+}
+
+.inputbox
+{
+    border: 3px solid #555;
+}
+
+.footer{
+    background-color:black;
+    margin-top: 50px;
+    color: aliceblue;
+    width: 100%;
+    text-align: center;
+}

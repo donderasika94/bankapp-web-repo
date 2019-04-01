@@ -2,6 +2,7 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
   <display-name>bank-app-web</display-name>
   <welcome-file-list>
+<!--    <welcome-file>login.html</welcome-file> -->
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
     <welcome-file>index.jsp</welcome-file>
@@ -9,9 +10,8 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  </web-app>
 
-	<!-- <servlet>
+<!-- <servlet>
 		<servlet-name>helloWorld</servlet-name>
 		<servlet-class>com.capgemini.bankapp.controller.HelloWorldController</servlet-class>
 		<load-on-startup>1</load-on-startup> 
@@ -20,5 +20,4 @@
 		<servlet-name>helloWorld</servlet-name>
 		<url-pattern>/hello</url-pattern>
 	</servlet-mapping> -->
-
-
+	</web-app>
